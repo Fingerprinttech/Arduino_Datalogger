@@ -29,6 +29,27 @@ calculate the time between each pulse. The derives the rpm using the number of t
 then writes the recorded data, both RPM and Torque Sensor Voltage, to the SD card inside the interrupt. The data
 is written to the file that is selected via the user interface. 
 
+PIN CONNECTIONS
+
+consider these pin connections before adding new components: 
+
+velocity and torque sensor:
+- encoder connected to digital pin 2
+- torque sensor connected to analog pin A0
+
+LCD display
+- SCL communication connected to SCL pin
+- SDA communication connected to SDA pin
+
+SD card
+- connected through ICSP pins
+- uses pin 4 for chip select
+
+user interface buttons
+- button that increases data index attached to digital pin 7
+- button that decreases data index attached to digital pin 6
+- reset button bridges ground to reset pin
+
 CURRENT ISSUES
 
 The most prominent unsolved problem of this system is that there are frequent spikes of the RPM that seem to be
